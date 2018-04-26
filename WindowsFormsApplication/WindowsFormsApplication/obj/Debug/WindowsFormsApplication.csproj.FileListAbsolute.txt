@@ -1,2 +1,3 @@
 C:\Users\Berger Elias\Documents\GitHub\CodingContest\WindowsFormsApplication\WindowsFormsApplication\bin\Debug\WindowsFormsApplication.exe.config
 C:\Users\dominik\Documents\GitHub\CodingContest\WindowsFormsApplication\WindowsFormsApplication\bin\Debug\WindowsFormsApplication.exe.config
+C:\Users\Selina\Documents\GitHub\CodingContest\WindowsFormsApplication\WindowsFormsApplication\bin\Debug\WindowsFormsApplication.exe.config
