@@ -15,6 +15,7 @@ namespace WindowsFormsApplication
         public Form1()
         {
             InitializeComponent();
+
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -29,7 +30,7 @@ namespace WindowsFormsApplication
 
         //Berger
 
-        string[] lines = System.IO.File.ReadAllLines(@"C:\Users\Berger Elias\Downloads\lvl1-0.inp");
+        string[] lines = System.IO.File.ReadAllLines(@"..\..\..\..\lvl1-1.inp");
 
         public string[][] Splitlines(string[] lines)
         {
@@ -198,7 +199,7 @@ namespace WindowsFormsApplication
 
 
         //Dominik
-        public int[] GetLines(string [][] value, int images)
+        public static int[] GetLines(string [][] value, int images)
         {
             int[] numbers = new int[images];
             int j=0;
@@ -217,10 +218,9 @@ namespace WindowsFormsApplication
             return numbers;
         }
 
-        public int [] GetFullTimestamp (string [][] value, int images, int [] linenumbers)
+        public static int [] GetFullTimestamp (string [][] value, int images, int [] linenumbers)
         {
             int number=0;
-            int j = 0;
             int[] Timestamps = new int[images];
             bool leer = false;
 
