@@ -23,7 +23,7 @@ namespace WindowsFormsApplication
             Array.Sort(Fulltimestamps);
             for(int i = 0; i<images; i++)
             {
-                System.IO.File.WriteAllLines(@"../../../../ergebnis1-1.txt", Convert.ToString(Fulltimestamps))
+                System.IO.File.WriteAllLines(@"..\..\..\..\ergebnis1-1.txt", intToString(Fulltimestamps));
             }
         }
 

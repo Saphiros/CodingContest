@@ -1,3 +1,11 @@
 C:\Users\Berger Elias\Documents\GitHub\CodingContest\WindowsFormsApplication\WindowsFormsApplication\bin\Debug\WindowsFormsApplication.exe.config
 C:\Users\dominik\Documents\GitHub\CodingContest\WindowsFormsApplication\WindowsFormsApplication\bin\Debug\WindowsFormsApplication.exe.config
 C:\Users\Selina\Documents\GitHub\CodingContest\WindowsFormsApplication\WindowsFormsApplication\bin\Debug\WindowsFormsApplication.exe.config
+C:\Users\dominik\Documents\GitHub\CodingContest\WindowsFormsApplication\WindowsFormsApplication\bin\Debug\WindowsFormsApplication.exe
+C:\Users\dominik\Documents\GitHub\CodingContest\WindowsFormsApplication\WindowsFormsApplication\bin\Debug\WindowsFormsApplication.pdb
+C:\Users\dominik\Documents\GitHub\CodingContest\WindowsFormsApplication\WindowsFormsApplication\obj\Debug\WindowsFormsApplication.csprojResolveAssemblyReference.cache
+C:\Users\dominik\Documents\GitHub\CodingContest\WindowsFormsApplication\WindowsFormsApplication\obj\Debug\WindowsFormsApplication.Form1.resources
+C:\Users\dominik\Documents\GitHub\CodingContest\WindowsFormsApplication\WindowsFormsApplication\obj\Debug\WindowsFormsApplication.Properties.Resources.resources
+C:\Users\dominik\Documents\GitHub\CodingContest\WindowsFormsApplication\WindowsFormsApplication\obj\Debug\WindowsFormsApplication.csproj.GenerateResource.Cache
+C:\Users\dominik\Documents\GitHub\CodingContest\WindowsFormsApplication\WindowsFormsApplication\obj\Debug\WindowsFormsApplication.exe
+C:\Users\dominik\Documents\GitHub\CodingContest\WindowsFormsApplication\WindowsFormsApplication\obj\Debug\WindowsFormsApplication.pdb
