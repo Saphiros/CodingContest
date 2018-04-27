@@ -228,7 +228,7 @@ namespace WindowsFormsApplication
         //Dominik
         public static int[] GetLines(string [][] value, int images)
         {
-            int[] numbers = new int[images];
+            int[] numbers = new int[images+1];
             int j=0;
             
             for (int i = 1; i < images; i++)
@@ -238,7 +238,7 @@ namespace WindowsFormsApplication
                     numbers[j] = Convert.ToInt32(value[i][1]);
                 } else
                 {
-                    numbers[j] = Convert.ToInt32(value[i + numbers[j-1]][2]+1);
+                    numbers[j] = Convert.ToInt32(value[i + numbers[j-1]][2]);
                 }
                 j++;
                 
@@ -250,19 +250,21 @@ namespace WindowsFormsApplication
         {
             int[] Timestamps = new int[images];
             bool leer = false;
+            int j = 0;
             int currentLine = 1;
 
             for (int i = 0; i < images; i++)
             {
                 for (int k = 0; k <= linenumbers[i]; k++)
                 {
-                    if (i != 0 && leer == false)
+                    if (value[k][j] != "0" && leer == false)
                     {
                         leer = false;
                     } else
                     {
                         leer = true;
                     }
+                    j++;
                 }
                 if (leer != false)
                 {
