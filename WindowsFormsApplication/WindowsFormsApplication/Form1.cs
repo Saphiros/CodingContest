@@ -15,7 +15,16 @@ namespace WindowsFormsApplication
         public Form1()
         {
             InitializeComponent();
-
+            string[] lines = System.IO.File.ReadAllLines(@"..\..\..\..\lvl1-1.inp");
+            string[][] splitLines = Splitlines(lines);
+            int images = GetNumberOfImages(splitLines);
+            int[] linecounts = GetLines(splitLines, images);
+            int[] Fulltimestamps = GetFullTimestamp(splitLines, images, linecounts);
+            Array.Sort(Fulltimestamps);
+            for(int i = 0; i<images; i++)
+            {
+                System.IO.File.WriteAllLines(@"../../../../ergebnis1-1.txt", Convert.ToString(Fulltimestamps))
+            }
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -30,7 +39,7 @@ namespace WindowsFormsApplication
 
         //Berger
 
-        string[] lines = System.IO.File.ReadAllLines(@"..\..\..\..\lvl1-1.inp");
+        
 
         public string[][] Splitlines(string[] lines)
         {
