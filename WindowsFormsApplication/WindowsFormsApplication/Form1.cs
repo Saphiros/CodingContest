@@ -15,13 +15,13 @@ namespace WindowsFormsApplication
         public Form1()
         {
             InitializeComponent();
-            string[] lines = System.IO.File.ReadAllLines(@"..\..\..\..\lvl1-1.inp");
+            string[] lines = System.IO.File.ReadAllLines(@"..\..\..\..\lvl1-2.inp");
             string[][] splitLines = Splitlines(lines);
             int images = GetNumberOfImages(splitLines);
             int[] linecounts = GetLines(splitLines, images);
             int[] Fulltimestamps = GetFullTimestamp(splitLines, images, linecounts);
             Array.Sort(Fulltimestamps);
-            System.IO.File.WriteAllLines(@"..\..\..\..\ergebnis1-1.txt", intToString(Fulltimestamps));
+            System.IO.File.WriteAllLines(@"..\..\..\..\ergebnis1-2.txt", intToString(Fulltimestamps));
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -240,6 +240,7 @@ namespace WindowsFormsApplication
                 {
                     numbers[j] = Convert.ToInt32(value[i + numbers[j-1]][2]+1);
                 }
+                j++;
                 
             }
             return numbers;
@@ -255,7 +256,7 @@ namespace WindowsFormsApplication
             {
                 for (int k = 0; k <= linenumbers[i]; k++)
                 {
-                    if (i != 0 && leer != false)
+                    if (i != 0 && leer == false)
                     {
                         leer = false;
                     } else
@@ -266,7 +267,7 @@ namespace WindowsFormsApplication
                 if (leer != false)
                 {
                     currentLine += linenumbers[i];
-                    Timestamps[i] = Convert.ToInt32(value[currentLine][0]);
+                    Timestamps[i] = Convert.ToInt32(value[currentLine-1][0]);
                 }
             }
             return Timestamps;
