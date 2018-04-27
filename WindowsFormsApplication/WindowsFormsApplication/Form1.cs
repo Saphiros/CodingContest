@@ -106,13 +106,15 @@ namespace WindowsFormsApplication
         {
             if(imagevalue.Length > 0)
             {
-                throw new ArgumentOutOfRangeException("imagevalue is < 0");
-                long timestamp;
+                
+                int timestamp;
+                string[] arr_imgval = imagevalue.Split(' ');
+                foreach (string val in arr_imgval) Console.WriteLine(val);
                 // timestamp auslesen
-
-
+                timestamp = Int32.Parse(arr_imgval[0]);
+                return timestamp;
             }
-
+            else throw new ArgumentOutOfRangeException("imagevalue is < 0");
         }
 
 
