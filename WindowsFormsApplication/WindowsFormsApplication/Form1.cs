@@ -23,7 +23,7 @@ namespace WindowsFormsApplication
             Array.Sort(Fulltimestamps);
             for(int i = 0; i<images; i++)
             {
-                System.IO.File.WriteAllLines(@"../../../../ergebnis1-1.txt", Convert.ToString(Fulltimestamps))
+                System.IO.File.WriteAllLines(@"..\..\..\..\ergebnis1-1.txt", intToString(Fulltimestamps));
             }
         }
 
@@ -62,7 +62,16 @@ namespace WindowsFormsApplication
 
 
 
+       public static string[] intToString(int[] timestamps)
+        {
+            string[] Timestamps = new string[timestamps.Length];
+            for(int i = 0; i < timestamps.Length; i++)
+            {
+                Timestamps[i] = Convert.ToString(timestamps[i]);
+            }
 
+            return Timestamps;
+        }
 
 
 
@@ -241,15 +250,14 @@ namespace WindowsFormsApplication
 
         public static int [] GetFullTimestamp (string [][] value, int images, int [] linenumbers)
         {
-            int number=0;
             int[] Timestamps = new int[images];
             bool leer = false;
 
-            for (int i = 0; number < images; i++)
+            for (int i = 0; i < images; i++)
             {
                 for (int k = 0; k <= linenumbers[i]; k++)
                 {
-                    if (number != 0 && leer != false)
+                    if (i != 0 && leer != false)
                     {
                         leer = false;
                     } else
@@ -261,7 +269,6 @@ namespace WindowsFormsApplication
                 {
                     Timestamps[i] = Convert.ToInt32(value[1 + linenumbers[i]][0]);
                 }
-                number++;
             }
             return Timestamps;
         }
