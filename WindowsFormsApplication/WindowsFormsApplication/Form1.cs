@@ -62,7 +62,16 @@ namespace WindowsFormsApplication
 
 
 
+       public static string[] intToString(int[] timestamps)
+        {
+            string[] Timestamps = new string[timestamps.Length];
+            for(int i = 0; i < timestamps.Length; i++)
+            {
+                Timestamps[i] = Convert.ToString(timestamps[i]);
+            }
 
+            return Timestamps;
+        }
 
 
 
