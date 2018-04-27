@@ -204,7 +204,7 @@ namespace WindowsFormsApplication
             {
                 if (j == 0)
                 {
-                    numbers[j] = Convert.ToInt32(value[i][2]+1);
+                    numbers[j] = Convert.ToInt32(value[i][1]);
                 } else
                 {
                     numbers[j] = Convert.ToInt32(value[i + numbers[j-1]][2]+1);
@@ -218,6 +218,7 @@ namespace WindowsFormsApplication
         {
             int[] Timestamps = new int[images];
             bool leer = false;
+            int currentLine = 1;
 
             for (int i = 0; i < images; i++)
             {
@@ -233,7 +234,8 @@ namespace WindowsFormsApplication
                 }
                 if (leer != false)
                 {
-                    Timestamps[i] = Convert.ToInt32(value[1 + linenumbers[i]][0]);
+                    currentLine += linenumbers[i];
+                    Timestamps[i] = Convert.ToInt32(value[currentLine][0]);
                 }
             }
             return Timestamps;
