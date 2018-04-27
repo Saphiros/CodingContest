@@ -41,7 +41,7 @@ namespace WindowsFormsApplication
 
         
 
-        public string[][] Splitlines(string[] lines)
+        public static string[][] Splitlines(string[] lines)
         {
             string[][] res = new string[lines.Length][];
             int i = 0;
@@ -55,7 +55,7 @@ namespace WindowsFormsApplication
             return res;
         }
 
-        public int GetNumberOfImages(string[][] values)
+        public static int GetNumberOfImages(string[][] values)
         {
             return Convert.ToInt32(values[0][0]);
         }
@@ -135,10 +135,22 @@ namespace WindowsFormsApplication
             else throw new ArgumentOutOfRangeException("imagevalue is < 0");
         }
 
+        /*
+       public static string[] GetResolution(string [] lines)
+        {
+            int[] vals = GetLines(Splitlines(lines),GetNumberOfImages(Splitlines(lines)));
+            List<string> lst = new List<string>();
+            int counter = 0;
+            for (int i = 1; i < lines.Length;i++)
+            {
+                if(counter < vals[i])
+                {
 
-
-
-
+                    counter++;
+                }
+            }
+        }
+        */
 
 
 
@@ -238,16 +250,15 @@ namespace WindowsFormsApplication
 
         public static int [] GetFullTimestamp (string [][] value, int images, int [] linenumbers)
         {
-            int number=0;
             int[] Timestamps = new int[images];
             bool leer = false;
             int currentLine = 1;
 
-            for (int i = 0; number < images; i++)
+            for (int i = 0; i < images; i++)
             {
                 for (int k = 0; k <= linenumbers[i]; k++)
                 {
-                    if (number != 0 && leer != false)
+                    if (i != 0 && leer != false)
                     {
                         leer = false;
                     } else
@@ -260,7 +271,6 @@ namespace WindowsFormsApplication
                     currentLine += linenumbers[i];
                     Timestamps[i] = Convert.ToInt32(value[currentLine][0]);
                 }
-                number++;
             }
             return Timestamps;
         }
