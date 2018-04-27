@@ -29,7 +29,7 @@ namespace WindowsFormsApplication
 
         //Berger
 
-        string lines = System.IO.File.ReadAllText(@"C:\Users\Berger Elias\Downloads\lvl1-0.inp");
+        string[] lines = System.IO.File.ReadAllLines(@"C:\Users\Berger Elias\Downloads\lvl1-0.inp");
 
         public string[][] Splitlines(string[] lines)
         {
@@ -43,6 +43,11 @@ namespace WindowsFormsApplication
                 i++;
             }
             return res;
+        }
+
+        public int GetNumberOfImages(string[][] values)
+        {
+            return Convert.ToInt32(values[0][0]);
         }
 
 
@@ -63,13 +68,6 @@ namespace WindowsFormsApplication
 
 
 
-
-
-
-<<<<<<< HEAD
-
-=======
->>>>>>> 2b17afa930c6e89c27c12932a2d5c0acd73d2a6f
 
 
 
