@@ -238,15 +238,14 @@ namespace WindowsFormsApplication
 
         public static int [] GetFullTimestamp (string [][] value, int images, int [] linenumbers)
         {
-            int number=0;
             int[] Timestamps = new int[images];
             bool leer = false;
 
-            for (int i = 0; number < images; i++)
+            for (int i = 0; i < images; i++)
             {
                 for (int k = 0; k <= linenumbers[i]; k++)
                 {
-                    if (number != 0 && leer != false)
+                    if (i != 0 && leer != false)
                     {
                         leer = false;
                     } else
@@ -258,7 +257,6 @@ namespace WindowsFormsApplication
                 {
                     Timestamps[i] = Convert.ToInt32(value[1 + linenumbers[i]][0]);
                 }
-                number++;
             }
             return Timestamps;
         }
