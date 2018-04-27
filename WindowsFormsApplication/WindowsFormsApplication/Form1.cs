@@ -24,6 +24,20 @@ namespace WindowsFormsApplication
 
         //Berger
 
+        string[] lines = System.IO.File.ReadAllLines(@"C:\Users\Berger Elias\Downloads\lvl1-0.inp");
+
+        public string[][] Splitlines(string[] lines)
+        {
+            string[][] res;
+            int i = 0;
+
+            foreach (string line in lines)
+            {
+                res[i] = line.Split();
+
+                i++;
+            }
+        }
 
 
 
@@ -46,8 +60,6 @@ namespace WindowsFormsApplication
 
 
 
-
-        
 
 
 
