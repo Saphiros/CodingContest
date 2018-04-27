@@ -17,6 +17,11 @@ namespace WindowsFormsApplication
             InitializeComponent();
         }
 
+        private void Form1_Load(object sender, EventArgs e)
+        {
+
+        }
+
 
 
 
@@ -24,19 +29,20 @@ namespace WindowsFormsApplication
 
         //Berger
 
-        string[] lines = System.IO.File.ReadAllLines(@"C:\Users\Berger Elias\Downloads\lvl1-0.inp");
+        string lines = System.IO.File.ReadAllText(@"C:\Users\Berger Elias\Downloads\lvl1-0.inp");
 
         public string[][] Splitlines(string[] lines)
         {
-            string[][] res;
+            string[][] res = new string[lines.Length][];
             int i = 0;
 
             foreach (string line in lines)
             {
-                res[i] = line.Split();
+                res[i] = line.Split(' ');
 
                 i++;
             }
+            return res;
         }
 
 
@@ -60,6 +66,10 @@ namespace WindowsFormsApplication
 
 
 
+<<<<<<< HEAD
+
+=======
+>>>>>>> 2b17afa930c6e89c27c12932a2d5c0acd73d2a6f
 
 
 
@@ -92,7 +102,18 @@ namespace WindowsFormsApplication
 
         //Krug
 
+        public static long GetTimestamps(string imagevalue)
+        {
+            if(imagevalue.Length > 0)
+            {
+                throw new ArgumentOutOfRangeException("imagevalue is < 0");
+                long timestamp;
+                // timestamp auslesen
 
+
+            }
+
+        }
 
 
 
