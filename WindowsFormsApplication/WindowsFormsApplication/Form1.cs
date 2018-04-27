@@ -117,37 +117,6 @@ namespace WindowsFormsApplication
 
         //Krug
 
-        public static long GetTimestamps(string imagevalue)
-        {
-            if(imagevalue.Length > 0)
-            {
-                
-                int timestamp;
-                string[] arr_imgval = imagevalue.Split(' ');
-                foreach (string val in arr_imgval) Console.WriteLine(val);
-                // timestamp auslesen
-                timestamp = Int32.Parse(arr_imgval[0]);
-                return timestamp;
-            }
-            else throw new ArgumentOutOfRangeException("imagevalue is < 0");
-        }
-
-        /*
-       public static string[] GetResolution(string [] lines)
-        {
-            int[] vals = GetLines(Splitlines(lines),GetNumberOfImages(Splitlines(lines)));
-            List<string> lst = new List<string>();
-            int counter = 0;
-            for (int i = 1; i < lines.Length;i++)
-            {
-                if(counter < vals[i])
-                {
-
-                    counter++;
-                }
-            }
-        }
-        */
 
 
 
