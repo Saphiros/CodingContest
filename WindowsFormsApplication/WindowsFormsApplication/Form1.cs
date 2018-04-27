@@ -21,10 +21,7 @@ namespace WindowsFormsApplication
             int[] linecounts = GetLines(splitLines, images);
             int[] Fulltimestamps = GetFullTimestamp(splitLines, images, linecounts);
             Array.Sort(Fulltimestamps);
-            for(int i = 0; i<images; i++)
-            {
-                System.IO.File.WriteAllLines(@"..\..\..\..\ergebnis1-1.txt", intToString(Fulltimestamps));
-            }
+            System.IO.File.WriteAllLines(@"..\..\..\..\ergebnis1-1.txt", intToString(Fulltimestamps));
         }
 
         private void Form1_Load(object sender, EventArgs e)
