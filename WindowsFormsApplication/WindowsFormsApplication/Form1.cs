@@ -17,6 +17,11 @@ namespace WindowsFormsApplication
             InitializeComponent();
         }
 
+        private void Form1_Load(object sender, EventArgs e)
+        {
+
+        }
+
 
 
 
@@ -47,7 +52,7 @@ namespace WindowsFormsApplication
 
 
 
-        
+
 
 
 
@@ -80,7 +85,18 @@ namespace WindowsFormsApplication
 
         //Krug
 
+        public static long GetTimestamps(string imagevalue)
+        {
+            if(imagevalue.Length > 0)
+            {
+                throw new ArgumentOutOfRangeException("imagevalue is < 0");
+                long timestamp;
+                // timestamp auslesen
 
+
+            }
+
+        }
 
 
 
