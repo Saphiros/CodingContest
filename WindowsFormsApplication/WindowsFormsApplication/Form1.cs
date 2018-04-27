@@ -31,7 +31,7 @@ namespace WindowsFormsApplication
 
         string[] lines = System.IO.File.ReadAllLines(@"C:\Users\Berger Elias\Downloads\lvl1-0.inp");
 
-        public string[][] Splitlines(string[] lines)
+        public static string[][] Splitlines(string[] lines)
         {
             string[][] res = new string[lines.Length][];
             int i = 0;
@@ -45,7 +45,7 @@ namespace WindowsFormsApplication
             return res;
         }
 
-        public int GetNumberOfImages(string[][] values)
+        public static int GetNumberOfImages(string[][] values)
         {
             return Convert.ToInt32(values[0][0]);
         }
@@ -121,10 +121,22 @@ namespace WindowsFormsApplication
             else throw new ArgumentOutOfRangeException("imagevalue is < 0");
         }
 
+        /*
+       public static string[] GetResolution(string [] lines)
+        {
+            int[] vals = GetLines(Splitlines(lines),GetNumberOfImages(Splitlines(lines)));
+            List<string> lst = new List<string>();
+            int counter = 0;
+            for (int i = 1; i < lines.Length;i++)
+            {
+                if(counter < vals[i])
+                {
 
-
-
-
+                    counter++;
+                }
+            }
+        }
+        */
 
 
 
@@ -203,7 +215,7 @@ namespace WindowsFormsApplication
 
 
         //Dominik
-        public int[] GetLines(string [][] value, int images)
+        public static int[] GetLines(string [][] value, int images)
         {
             int[] numbers = new int[images];
             int j=0;
