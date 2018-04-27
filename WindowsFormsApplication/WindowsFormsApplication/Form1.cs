@@ -66,10 +66,7 @@ namespace WindowsFormsApplication
 
 
 
-<<<<<<< HEAD
 
-=======
->>>>>>> 2b17afa930c6e89c27c12932a2d5c0acd73d2a6f
 
 
 
@@ -197,5 +194,23 @@ namespace WindowsFormsApplication
 
 
         //Dominik
+        public int[] GetLines(string [][] value, int images)
+        {
+            int[] numbers = new int[images];
+            int j=0;
+            
+            for (int i = 1; i < images; i++)
+            {
+                if (j == 0)
+                {
+                    numbers[j] = Convert.ToInt32(value[i][2]);
+                } else
+                {
+                    numbers[j] = Convert.ToInt32(value[i + numbers[j-1]][2]);
+                }
+                
+            }
+            return numbers;
+        }
     }
 }
