@@ -29,7 +29,7 @@ namespace WindowsFormsApplication
 
         //Berger
 
-        string lines = System.IO.File.ReadAllText(@"C:\Users\Berger Elias\Downloads\lvl1-0.inp");
+        string[] lines = System.IO.File.ReadAllLines(@"C:\Users\Berger Elias\Downloads\lvl1-0.inp");
 
         public string[][] Splitlines(string[] lines)
         {
@@ -43,6 +43,11 @@ namespace WindowsFormsApplication
                 i++;
             }
             return res;
+        }
+
+        public int GetNumberOfImages(string[][] values)
+        {
+            return Convert.ToInt32(values[0][0]);
         }
 
 
@@ -65,10 +70,12 @@ namespace WindowsFormsApplication
 
 
 
+<<<<<<< HEAD
 
 
 
-
+=======
+>>>>>>> 2482eeb7556ae97ad3277b65e1bb6f9f1f938ab4
 
 
 
@@ -103,13 +110,15 @@ namespace WindowsFormsApplication
         {
             if(imagevalue.Length > 0)
             {
-                throw new ArgumentOutOfRangeException("imagevalue is < 0");
-                long timestamp;
+                
+                int timestamp;
+                string[] arr_imgval = imagevalue.Split(' ');
+                foreach (string val in arr_imgval) Console.WriteLine(val);
                 // timestamp auslesen
-
-
+                timestamp = Int32.Parse(arr_imgval[0]);
+                return timestamp;
             }
-
+            else throw new ArgumentOutOfRangeException("imagevalue is < 0");
         }
 
 
