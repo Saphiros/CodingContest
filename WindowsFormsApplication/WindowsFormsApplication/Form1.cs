@@ -70,12 +70,7 @@ namespace WindowsFormsApplication
 
 
 
-<<<<<<< HEAD
 
-
-
-=======
->>>>>>> 2482eeb7556ae97ad3277b65e1bb6f9f1f938ab4
 
 
 
@@ -212,14 +207,42 @@ namespace WindowsFormsApplication
             {
                 if (j == 0)
                 {
-                    numbers[j] = Convert.ToInt32(value[i][2]);
+                    numbers[j] = Convert.ToInt32(value[i][2]+1);
                 } else
                 {
-                    numbers[j] = Convert.ToInt32(value[i + numbers[j-1]][2]);
+                    numbers[j] = Convert.ToInt32(value[i + numbers[j-1]][2]+1);
                 }
                 
             }
             return numbers;
+        }
+
+        public int [] GetFullTimestamp (string [][] value, int images, int [] linenumbers)
+        {
+            int number=0;
+            int j = 0;
+            int[] Timestamps = new int[images];
+            bool leer = false;
+
+            for (int i = 0; number < images; i++)
+            {
+                for (int k = 0; k <= linenumbers[i]; k++)
+                {
+                    if (number != 0 && leer != false)
+                    {
+                        leer = false;
+                    } else
+                    {
+                        leer = true;
+                    }
+                }
+                if (leer != false)
+                {
+                    Timestamps[i] = Convert.ToInt32(value[1 + linenumbers[i]][0]);
+                }
+                number++;
+            }
+            return Timestamps;
         }
     }
 }
